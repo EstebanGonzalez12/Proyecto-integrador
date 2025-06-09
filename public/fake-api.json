@@ -1,0 +1,184 @@
+{
+  "planesTuristicos": [
+    {
+      "id": 1,
+      "destino": "Cartagena",
+      "nochesBase": 3,
+      "hotel": {
+        "nombre": "Hotel Caribe by Faranda",
+        "precioPorNoche": 60
+      },
+      "transporte": {
+        "tipo": "Vuelo ida y vuelta",
+        "precio": 120
+      },
+      "alimentacion": {
+        "precioPorDia": 30
+      },
+      "actividades": [
+        {
+          "nombre": "Tour guiado por la ciudad amurallada",
+          "precio": 25
+        },
+        {
+          "nombre": "Paseo en chiva rumbera",
+          "precio": 15
+        },
+        {
+          "nombre": "Excursión a Islas del Rosario",
+          "precio": 40
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "destino": "Lima",
+      "nochesBase": 3,
+      "hotel": {
+        "nombre": "Hotel José Antonio Deluxe",
+        "precioPorNoche": 70
+      },
+      "transporte": {
+        "tipo": "Vuelo ida y vuelta",
+        "precio": 150
+      },
+      "alimentacion": {
+        "precioPorDia": 35
+      },
+      "actividades": [
+        {
+          "nombre": "City tour por el centro histórico",
+          "precio": 25
+        },
+        {
+          "nombre": "Visita al Parque de las Aguas",
+          "precio": 12
+        },
+        {
+          "nombre": "Tour gastronómico en Miraflores",
+          "precio": 45
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "destino": "Madrid",
+      "nochesBase": 4,
+      "hotel": {
+        "nombre": "Hotel Riu Plaza España",
+        "precioPorNoche": 110
+      },
+      "transporte": {
+        "tipo": "Vuelo ida y vuelta",
+        "precio": 620
+      },
+      "alimentacion": {
+        "precioPorDia": 40
+      },
+      "actividades": [
+        {
+          "nombre": "Visita al Museo del Prado",
+          "precio": 18
+        },
+        {
+          "nombre": "Tour al Palacio Real",
+          "precio": 20
+        },
+        {
+          "nombre": "Espectáculo de flamenco",
+          "precio": 35
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "destino": "ciudad-de-panama",
+      "nochesBase": 3,
+      "hotel": {
+        "nombre": "Hotel Riu Plaza Panamá",
+        "precioPorNoche": 70
+      },
+      "transporte": {
+        "tipo": "Vuelo ida y vuelta",
+        "precio": 150
+      },
+      "alimentacion": {
+        "precioPorDia": 35
+      },
+      "actividades": [
+        {
+          "nombre": "Visita al Canal de Panamá",
+          "precio": 25
+        },
+        {
+          "nombre": "Tour por el Casco Antiguo",
+          "precio": 20
+        },
+        {
+          "nombre": "Paseo en barco por la Bahía",
+          "precio": 30
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "destino": "Punta Cana",
+      "nochesBase": 3,
+      "hotel": {
+        "nombre": "Hotel Barceló Bávaro Palace",
+        "precioPorNoche": 85
+      },
+      "transporte": {
+        "tipo": "Vuelo ida y vuelta",
+        "precio": 350
+      },
+      "alimentacion": {
+        "precioPorDia": 40
+      },
+      "actividades": [
+        {
+          "nombre": "Excursión a Isla Saona",
+          "precio": 60
+        },
+        {
+          "nombre": "Paseo en catamarán",
+          "precio": 45
+        },
+        {
+          "nombre": "Safari por la selva tropical",
+          "precio": 50
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "destino": "Rio De Janeiro",
+      "nochesBase": 4,
+      "hotel": {
+        "nombre": "Hotel Hilton Copacabana",
+        "precioPorNoche": 95
+      },
+      "transporte": {
+        "tipo": "Vuelo ida y vuelta",
+        "precio": 580
+      },
+      "alimentacion": {
+        "precioPorDia": 38
+      },
+      "actividades": [
+        {
+          "nombre": "Visita al Cristo Redentor",
+          "precio": 25
+        },
+        {
+          "nombre": "Teleférico al Pan de Azúcar",
+          "precio": 30
+        },
+        {
+          "nombre": "Tour por las playas de Copacabana e Ipanema",
+          "precio": 20
+        }
+      ]
+    }
+  ]
+}

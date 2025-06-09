@@ -1,0 +1,116 @@
+.destinos-container {
+  display: flex;
+  padding: 60px;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.destinos-image {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.destinos-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid black;
+}
+
+.destinos-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.destinos-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.destinos-content p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.tour-package {
+  margin-top: 2rem;
+  background-color: #e3f2fd;
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #083c5a;
+  font-size: 1.05rem;
+}
+
+.tour-package h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #0d47a1;
+}
+
+.tour-package label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.tour-package input[type="number"] {
+  padding: 6px;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #90caf9;
+  background-color: #ffffff;
+  width: 60px;
+}
+
+.tour-package ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.tour-package li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.tour-package h4 {
+  text-align: center;
+  margin-top: 1.5rem;
+  }
+
+.reserve-button {
+  margin-top: 0.5rem;
+  padding: 0.75rem 2rem;
+  border: 2px solid black;
+  background-color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.reserve-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.reserve-button:hover {
+  transform: scale(1.05);
+}
