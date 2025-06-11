@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+const ApiUsuarios = "http://localhost:8081/api/auth/login";
+import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { alerta } from "../helpers/funciones";
 import "../pages/Login.css";
@@ -6,35 +7,31 @@ import "../pages/Login.css";
 const Login = () => {
   const [usuario, setUsuario] = useState("");
   const [password, setPassword] = useState("");
-  const [usuarios, setUsuarios] = useState([]);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetch("/usuarios.json")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.usuarios) {
-          setUsuarios(data.usuarios);
-        } else {
-          alerta("Error", "No se encontró la lista de usuarios", "error");
-        }
-      })
-      .catch(() =>
-        alerta("Error", "No se pudo cargar la base de usuarios", "error")
-      );
-  }, []);
-
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
-    const usuarioValido = usuarios.find(
-      (u) => u.usuario === usuario && u.password === password
-    );
+    if (!usuario || !password) {
+      alerta("Campos vacíos", "Debes completar ambos campos", "warning");
+      return;
+    }
 
-    if (usuarioValido) {
-      const tokenSimulado = `token-${usuarioValido.usuario}-${Date.now()}`;
-      localStorage.setItem("token", tokenSimulado);
-      localStorage.setItem("usuarioActivo", usuarioValido.usuario);
+    try {
+      const response = await fetch(ApiUsuarios, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        // body: JSON.stringify({ usuario, password }),
+      });
+
+      if (!response.ok) throw new Error("Error en la autenticación");
+
+      const data = await response.json();
+
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("usuarioActivo", data.usuario);
 
       alerta("Bienvenido", "Inicio de sesión exitoso", "success").then(() => {
         const datosReserva = sessionStorage.getItem("reservaTemporal");
@@ -44,7 +41,8 @@ const Login = () => {
           navigate("/reservas");
         }
       });
-    } else {
+    } catch (error) {
+      console.error("Error:", error);
       alerta("Error", "Usuario o contraseña incorrectos", "error");
     }
   };
